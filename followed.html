@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body id="body">
+<a id="info"></a>
+<div>Username: <input id="uname" type="text"><br>
+    <input id="follow" type="radio" name="follow" checked="checked"> Who they follow
+    <input type="radio" name="follow"> Who follow them<br>
+    <button id="submitbtn" onclick="getUserid(document.getElementById('uname').value)">Submit</button>
+</div>
+<a id="uid"></a>
+<a id="total"></a>
+<table id="table"></table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="followed.js"></script>
+</body>
+</html>
