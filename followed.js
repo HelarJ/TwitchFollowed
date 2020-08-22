@@ -34,7 +34,7 @@ function printFollows(json, type){ //Puts the data received from the Twitch API 
         newtd = document.createElement("td")
         newtr = document.createElement("tr")
         newtd.appendChild(newtr)
-        if (type){
+        if (type == "to"){
             newtd = document.createElement("td")
             newtd.innerHTML = json["data"][i]["from_name"]
             newtr.appendChild(newtd)
@@ -67,7 +67,7 @@ function getFollows(id, after=null, direction){ //Gets follower list from the Tw
             "Authorization": "Bearer "+auth
         },
         success: function(data) {
-            printFollows(data)
+            printFollows(data, direction)
             if (counter == null){ //First time this function is called the counter is updated with the total amount of follows to get.
                 counter = data["total"]   
             }
